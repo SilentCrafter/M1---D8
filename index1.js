@@ -82,7 +82,9 @@ console.log(sum)
 
 if (sum > 50) {
   console.log("Total price is:", sum)
-} else console.log("Total price: ", sum + 10)
+} else {
+  console.log("Total price: ", sum + 10)
+}
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
