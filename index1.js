@@ -71,22 +71,18 @@ if (user2.email === user.email) {
 */
 
 const totalShoppingCart = [12, 4, 6, 9, 15]
+let sum = 0
 
 // 0 + 12 + 4 + 6 + 15
-const initialValue = 0
-const sumWithInitial = totalShoppingCart.reduce(
-  (previousValue, currentValue) => previousValue + currentValue,
-  initialValue
-)
+for (let i = 0; i <= totalShoppingCart.length - 1; i++) {
+  sum = sum + totalShoppingCart[i]
+}
 
-console.log(sumWithInitial)
+console.log(sum)
 
-const checkFreeShippingEligibility =
-  sumWithInitial >= 50
-    ? "Congratulations! Your shipping cost is free."
-    : "Your shipping cost is £10"
-
-console.log(checkFreeShippingEligibility)
+if (sum > 50) {
+  console.log("Total price is:", sum)
+} else console.log("Total price: ", sum + 10)
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
@@ -94,7 +90,7 @@ console.log(checkFreeShippingEligibility)
 */
 
 const blackFridayDiscount = 0.2
-const newTotalCost = sumWithInitial * blackFridayDiscount
+const newTotalCost = sum * blackFridayDiscount
 
 console.log(newTotalCost)
 
