@@ -83,7 +83,7 @@ console.log(sum)
 if (sum > 50) {
   console.log("Total price is:", sum)
 } else {
-  console.log("Total price: ", sum + 10)
+  console.log("Total price:", sum + 10)
 }
 
 /* EXERCISE 7
