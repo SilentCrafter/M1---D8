@@ -151,13 +151,6 @@ for (let i = 0; i < carsForRent.length; i++) {
 
 const carsForSale = []
 
-for (let i = 0; i < carsForSale.length; i++) {
-  const cars = arrOfCars[i]
-  console.log("CAR: " + (i + 1), cars.brand, cars.model, cars.licensePlate)
-}
-
-console.log(carsForSale)
-
 /* EXERCISE 13
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
