@@ -12,31 +12,57 @@ ASSIGNMENT RULES
  Create a variable and assign to it an array containing the first 5 positive numbers.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const firstFivePositiveNumbers = [1, 2, 3, 4, 5]
+
+console.log(firstFivePositiveNumbers)
 
 /* EXERCISE 2
  Create a variable and assign to it an object containing your name, surname, email address and age.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const user = {
+  name: "John",
+  surname: "Doe",
+  email: "johndoe456@gmail.com",
+  age: 23
+}
+
+console.log(user)
 
 /* EXERCISE 3
- Add to the previously created object a property with a boolean value to rappresent wheter you have or not a driving license.
+ Add to the previously created object a property with a boolean value to represent whether you have or not a driving license.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const checkLicense =
+  user.age >= 18 ? "Has a driving license!" : "Does not have a driving license!"
+
+console.log(checkLicense)
 
 /* EXERCISE 4
  Remove from the previously created object the age property.
 */
 
-/* WRITE YOUR ANSWER HERE */
+delete user.age
+
+console.log(user.age)
 
 /* EXERCISE 5
  Create a second object with another name, surname, email address and verify that this object has a different email address than the previous one.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const user2 = {}
+
+Object.assign(user2, user)
+
+user2.email = "bensmith123@gmail.com"
+
+console.log(user2)
+
+if (user2.email === user.email) {
+  console.log("The email addresses match!")
+} else {
+  console.log("The email addresses do not match!")
+}
 
 /* EXERCISE 6
  You are working on an e-commerce website. In the variable totalShoppingCart you are storing the total amount spent by the current user.
@@ -44,49 +70,96 @@ ASSIGNMENT RULES
  Write an algorithm that calculates the total cost to charge the user with.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const totalShoppingCart = [12, 4, 6, 9, 15]
+
+// 0 + 12 + 4 + 6 + 15
+const initialValue = 0
+const sumWithInitial = totalShoppingCart.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+)
+
+console.log(sumWithInitial)
+
+const checkFreeShippingEligibility =
+  sumWithInitial >= 50
+    ? "Congratulations! Your shipping cost is free."
+    : "Your shipping cost is £10"
+
+console.log(checkFreeShippingEligibility)
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
  Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const blackFridayDiscount = 0.2
+const newTotalCost = sumWithInitial * blackFridayDiscount
+
+console.log(newTotalCost)
 
 /* EXERCISE 8
  Create a variable and assign to it an object representing a car, with properties like brand, model and licensePlate.
  Then clone it 5 times, and change the licensePlate for each cloned car without affecting the original one.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const arrOfCars = [
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" }
+]
+
+console.log(arrOfCars)
 
 /* EXERCISE 9
  Create a variable called carsForRent and assign to it an array containing all the cars from the previous exercise.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const carsForRent = [
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37543" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37544" },
+  { brand: "Volkswagon", model: "Golf", licensePlate: "6G37545" }
+]
 
 /* EXERCISE 10
  Remove the first and the last car from the carsForRent array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log(carsForRent.shift())
+console.log(carsForRent)
+
+console.log(carsForRent.pop())
+console.log(carsForRent)
 
 /* EXERCISE 11
  Print to the console the type of the car variable you created before, as well as the types of its licensePlate and brand properties.
 */
 
-/* WRITE YOUR ANSWER HERE */
+for (let i = 0; i < carsForRent.length; i++) {
+  const cars = arrOfCars[i]
+  console.log("CAR: " + (i + 1), cars.brand, cars.licensePlate)
+}
 
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
 */
 
-/* WRITE YOUR ANSWER HERE */
+const carsForSale = []
+
+for (let i = 0; i < carsForSale.length; i++) {
+  const cars = arrOfCars[i]
+  console.log("CAR: " + (i + 1), cars.brand, cars.model, cars.licensePlate)
+}
+
+console.log(carsForSale)
 
 /* EXERCISE 13
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
-
-/* WRITE YOUR ANSWER HERE */
