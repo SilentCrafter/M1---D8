@@ -91,7 +91,7 @@ if (sum > 50) {
  Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-const blackFridayDiscount = 0.2
+const blackFridayDiscount = 0.8
 const newTotalCost = sum * blackFridayDiscount
 
 console.log(newTotalCost)
